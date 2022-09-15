@@ -1,16 +1,15 @@
 # Config
 envs:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example env
+	docker-compose --file docker-compose.yml --env-file .env run nextjsexample env
 
 app-shell:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example sh
+	docker-compose --file docker-compose.yml --env-file .env run nextjsexample sh
 
 # Images & Containers
-clean-dist:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example npm run clean
+# TODO: is a clean required?
 
 build-dist:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example npm run build
+	docker-compose --file docker-compose.yml --env-file .env run nextjsexample npm run build
 
 build:
 	docker-compose --file docker-compose.yml --env-file .env build
@@ -19,10 +18,10 @@ run:
 	docker-compose --file docker-compose.yml --env-file .env up
 
 run-tests:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example npm test
+	docker-compose --file docker-compose.yml --env-file .env run nextjsexample npm test
 
 lint:
-	docker-compose --file docker-compose.yml --env-file .env run nextjs-example npm run lint
+	docker-compose --file docker-compose.yml --env-file .env run nextjsexample npm run lint
 
 watch-logs:
 	docker-compose --file docker-compose.yml --env-file .env logs
@@ -39,4 +38,4 @@ remove:
 
 clean: stop down remove
 
-init: clean clean-dist build-dist build run
+init: clean build-dist build run
