@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  shopit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DEFAULT_PORT: ${PORT}
+    environment:
+      NODE_ENV: DEVELOPMENT
+    volumes:
+      - .:/shopit
+    ports:
+      - ${PORT}:${PORT}
+    container_name: nextjs-example
+    command: [ "npm", "run", "start:dev" ]
+    restart: always
