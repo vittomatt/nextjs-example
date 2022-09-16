@@ -6,6 +6,10 @@ const path = require('path');
 
 module.exports = {
     reactStrictMode: true,
+    i18n: {
+        locales: ['en', 'es'],
+        defaultLocale: 'en',
+    },
     sassOptions: {
         includePaths: [path.resolve(__dirname, 'assets', 'styles')],
         prependData: `

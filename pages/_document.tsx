@@ -1,13 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ReactElement } from 'react';
 
-import { DEFAULT_LOCALE } from '../l10n/Languages';
-
+// TODO: do not hardcode this
 class NextJsDocument extends Document {
     render(): ReactElement {
         return (
             <Html>
-                <Head lang={DEFAULT_LOCALE} />
+                <Head lang={'en'} />
                 <body>
                     <Main />
                     <NextScript />
