@@ -1,10 +1,10 @@
-import { ROOT_PATH, USERS_PATH } from '../shared/Routes';
+import { Routes } from '../shared/Routes';
 
 const es = {
-    [ROOT_PATH]: {
+    [Routes.ROOT]: {
         hello: '¡Hola Mundo!',
     },
-    [USERS_PATH]: {},
+    [Routes.USERS]: {},
 };
 
 export default es;

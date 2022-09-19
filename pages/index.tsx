@@ -5,9 +5,11 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 import { useIntl } from 'react-intl';
 
+import { Routes } from '@shared/Routes';
+
 import styles from './index.module.scss';
 
-const getRoute = (): UrlObject => ({ pathname: '/' });
+const getRoute = (): UrlObject => ({ pathname: Routes.ROOT });
 
 const HomePage = (): ReactElement => {
     const { formatMessage } = useIntl();
@@ -16,7 +18,7 @@ const HomePage = (): ReactElement => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>{f('hello')}</h1>
-            <Link href="/users">Go to users page</Link>
+            <Link href={Routes.USERS}>Go to users page</Link>
             <footer />
         </div>
     );
