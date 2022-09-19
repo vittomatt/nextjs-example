@@ -1,13 +1,12 @@
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 
-import Internationalization from '../components/Internationalization';
-import Logo from '../components/shared/Logo';
+import Internationalization from '@components/Internationalization';
+import Logo from '@components/shared/Logo';
+import '@styles/globals.scss';
 
 import styles from './app.module.scss';
-import '../assets/styles/globals.scss';
 
 const NextJSExampleApp = ({ Component, pageProps }: AppProps): ReactElement => {
     return (

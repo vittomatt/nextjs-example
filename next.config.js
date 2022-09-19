@@ -11,7 +11,7 @@ module.exports = {
         defaultLocale: 'en',
     },
     sassOptions: {
-        includePaths: [path.resolve(__dirname, 'assets', 'styles')],
+        includePaths: [path.resolve(__dirname, 'styles')],
         prependData: `
             @use "colors.scss";
             @use "variables.scss";

@@ -2,9 +2,8 @@ import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
 import { IntlProvider } from 'react-intl';
 
-import locales from '../content/locale';
-
-import { Routes } from '../shared/Routes';
+import locales from '@locale/locales';
+import { Routes } from '@shared/Routes';
 
 const DEFAULT_LOCALE = 'en';
 type AcceptedLocales = typeof DEFAULT_LOCALE | 'es';
