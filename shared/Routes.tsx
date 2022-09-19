@@ -1,6 +1,6 @@
 enum Routes {
     ROOT = '/',
-    USERS = 'users',
+    USERS = '/users',
 }
 
 export { Routes };

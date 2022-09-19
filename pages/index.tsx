@@ -1,10 +1,10 @@
 import { UrlObject } from 'node:url';
 
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import { ReactElement } from 'react';
-import { useIntl } from 'react-intl';
 
+import Footer from '@components/root/Footer';
+import SignIn from '@components/root/SignIn';
 import { Routes } from '@shared/Routes';
 
 import styles from './index.module.scss';
@@ -12,14 +12,14 @@ import styles from './index.module.scss';
 const getRoute = (): UrlObject => ({ pathname: Routes.ROOT });
 
 const HomePage = (): ReactElement => {
-    const { formatMessage } = useIntl();
-    const f = (id: any) => formatMessage({ id });
-
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>{f('hello')}</h1>
-            <Link href={Routes.USERS}>Go to users page</Link>
-            <footer />
+            <div className={styles['sign-in-container']}>
+                <SignIn />
+            </div>
+            <div className={styles['footer-container']}>
+                <Footer />
+            </div>
         </div>
     );
 };
